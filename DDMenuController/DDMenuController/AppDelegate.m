@@ -24,6 +24,7 @@
     
     
     FeedController *mainController = [[FeedController alloc] init];
+    
     DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:mainController];
     _menuController = rootController;
     

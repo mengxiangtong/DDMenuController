@@ -78,12 +78,15 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // lets just push another feed view 
+    // lets just push another feed view
+    
     UINavigationController *menuController = (UINavigationController*)((AppDelegate*)[[UIApplication sharedApplication] delegate]).menuController;
+    
     FeedController *controller = [[FeedController alloc] init];
     [menuController pushViewController:controller animated:YES];
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 

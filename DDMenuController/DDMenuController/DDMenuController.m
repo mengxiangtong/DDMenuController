@@ -534,8 +534,19 @@
 
 - (void)showLeft:(id)sender {
     
-    [self showLeftController:YES];
+    NSLog(@" dian ji an niu  canShowLeft - %d ",  _menuFlags.canShowLeft );
+    NSLog(@" dian ji an niu showingLeftView- %d ",  _menuFlags.showingLeftView );//
+    NSLog(@" dian ji an niu respondsToWillShowViewController- %d ",  _menuFlags.respondsToWillShowViewController );
+
+    NSLog(@" 打开left ＝＝1  没打开left ＝＝ 0 showingLeftView- %d ",  _menuFlags.showingLeftView );//
     
+    if (_menuFlags.showingLeftView == 1) {
+        [self showRootController:YES];
+    }
+    else
+    {
+       [self showLeftController:YES];
+    }
 }
 
 - (void)showRight:(id)sender {
