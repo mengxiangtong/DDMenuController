@@ -411,6 +411,7 @@
 }
 
 - (void)showLeftController:(BOOL)animated {
+    
     if (!_menuFlags.canShowLeft) return;
     
     if (_menuFlags.respondsToWillShowViewController) {
